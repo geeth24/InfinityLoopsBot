@@ -12,8 +12,9 @@
 <h3 align="center">Infinity Loops Bot </h3>
 
   <p align="center">
-InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer. </p>
+InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer.
 
+   
     <br />
     <br />
     <a href="https://github.com/thetechie7/InfinityLoopsBot">View Demo</a>
