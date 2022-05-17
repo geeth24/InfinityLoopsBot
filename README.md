@@ -12,7 +12,7 @@
 <h3 align="center">Infinity Loops Bot </h3>
 
   <p align="center">
-InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer.
+InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer. </p>
 
     <br />
     <br />
@@ -81,7 +81,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone [https://github.com/github_username/repo_name.git](https://github.com/thetechie7/InfinityLoopsBot)
+   git clone https://github.com/thetechie7/InfinityLoopsBot
    ```
 2. Install Python packages
    ```sh
