@@ -15,8 +15,7 @@
 InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer.
 
    
-    <br />
-    <br />
+    
     <a href="https://github.com/thetechie7/InfinityLoopsBot">View Demo</a>
     ·
     <a href="https://github.com/thetechie7/InfinityLoopsBot">Report Bug</a>
