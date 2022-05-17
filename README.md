@@ -9,12 +9,12 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Infinity Loops Bot/h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/thetechie7/InfinityLoopsBot"><strong>Explore the docs »</strong></a>
+InA bot that webscrapes looperman.com and picks a random loop to send to help inspire an artist/producer.
+
+   <a href="https://github.com/thetechie7/InfinityLoopsBot"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/thetechie7/InfinityLoopsBot">View Demo</a>
