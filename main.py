@@ -20,6 +20,7 @@ bot = commands.Bot(command_prefix='$')
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=discord.Game('looperman.com'))
     print(f"{bot.user.name} is ready.")
 
 
