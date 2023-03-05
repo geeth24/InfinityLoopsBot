@@ -1,6 +1,4 @@
-import discord
-import os
-from discord.ext import commands
+import interactions
 import io
 import aiohttp
 import requests
@@ -15,17 +13,14 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
 }
 
-bot = commands.Bot(command_prefix='$')
+bot = interactions.Client(token="OTc2ODUwMjMwMDE4NDY5ODg4.GvmXbM.7AueoyCshZSECm5GTEcWoF-cyRVf45bRNGefHk")
 
-
-@bot.event
-async def on_ready():
-    await bot.change_presence(activity=discord.Game('looperman.com'))
-    print(f"{bot.user.name} is ready.")
-
-
-@bot.command()
-async def loop(ctx, arg):
+@bot.command(
+    name="loop",
+    description="Give a keyword and get a random loop from looperman.com",
+)
+@interactions.option()
+async def loop(ctx: interactions.CommandContext, arg: str):
     if arg == "":
         url = "https://www.looperman.com/loops"
     else:
@@ -48,14 +43,14 @@ async def loop(ctx, arg):
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
+                file = data
                 url_spilt = rand_loop_url.split('/')[-1]
-                if url_spilt.split('.')[-1] == "mp3":
-                    await ctx.send(file=discord.File(data, url_spilt.split('.')[-2] + ".mp3"))
-                elif url_spilt.split('.')[-1] == "wav":
-                    await ctx.send(file=discord.File(data, url_spilt.split('.')[-2] + ".wav"))
+                urlExtension = url_spilt.split('.')[-1]
+                files = interactions.File(filename=url_spilt.split('.')[-2]+ "." + urlExtension, fp=file)
+                await ctx.send(content="Read the message in a test file below.", files=files)
 
     else:
         await ctx.send("No loops found. Please try a different argument")
 
 
-bot.run(os.getenv('TOKEN'))
+bot.start()
